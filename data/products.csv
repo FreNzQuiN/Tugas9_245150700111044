@@ -1,1 +1,10 @@
-
+id,name,category,price,quantity
+3,Sabun Mandi Lifebuoy,Perawatan Diri,8000.0,10
+9,Keripik Singkong Pedas,Makanan,8500.0,50
+8,Minuman Isotonik 500ml,Minuman,9500.0,40
+6,Pasta Gigi Pepsodent 190g,Perawatan Diri,12000.0,18
+5,Detergen Rinso 900g,Rumah Tangga,14000.0,20
+10,Pembersih Lantai Wipol 800ml,Rumah Tangga,18000.0,15
+2,Minyak Goreng 1L,Makanan,18000.0,30
+4,Shampoo Dove 170ml,Perawatan Diri,23000.0,12
+1,Beras 5kg,Makanan,60000.0,15
