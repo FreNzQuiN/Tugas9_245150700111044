@@ -1,4 +1,4 @@
-package Kuliah.Semester2.appKoperasi;
+// package Kuliah.Semester2.appKoperasi;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
