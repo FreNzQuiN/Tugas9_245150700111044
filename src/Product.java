@@ -1,4 +1,4 @@
-package Kuliah.Semester2.appKoperasi;
+// package Kuliah.Semester2.appKoperasi;
 public class Product {
     private int id;
     private String name;
