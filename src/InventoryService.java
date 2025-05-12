@@ -79,30 +79,37 @@ public class InventoryService {
 
             switch (choice) {
                 case "1":
+                    clearScreen();
                     viewAll(products);
                     break;
                 case "2":
+                    clearScreen();
                     addProduct(products, sc);
                     break;
                 case "3":
+                    clearScreen();
                     updateQuantity(products, sc);
                     break;
                 case "4":
+                    clearScreen();
                     deleteProduct(products, sc);
                     break;
                 case "5":
+                    clearScreen();
                     System.out.print("Kata kunci: ");
                     String keyword = sc.nextLine();
                     List<Product> result = searchProducts(products, keyword);
                     viewAll(result);
                     break;
                 case "6":
+                    clearScreen();
                     System.out.print("Sortir berdasarkan (price/quantity): ");
                     String criteria = sc.nextLine();
                     sortProducts(products, criteria);
                     viewAll(products);
                     break;
                 case "7":
+                    clearScreen();
                     System.out.print("Harga minimum: ");
                     double min = Double.parseDouble(sc.nextLine());
                     System.out.print("Harga maksimum: ");
@@ -111,6 +118,7 @@ public class InventoryService {
                     viewAll(filtered);
                     break;
                 case "8":
+                    clearScreen();
                     running = false;
                     break;
                 default:
@@ -168,4 +176,17 @@ public class InventoryService {
       products.removeIf(p -> p.getId() == id);
       System.out.println("Produk dihapus jika ditemukan.");
    }
+    
+    static void clearScreen() {
+        try {
+            if (System.getProperty("os.name").contains("Windows")) {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } else {
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+            }
+        } catch (Exception e) {
+            System.out.println("Gagal membersihkan layar.");
+        }
+    }
 }
