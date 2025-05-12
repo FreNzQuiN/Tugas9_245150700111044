@@ -1,4 +1,4 @@
-// package Kuliah.Semester2.appKoperasi;
+package Kuliah.Semester2.appKoperasi;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -9,6 +9,7 @@ public class App {
         Path dataDir  = Paths.get("data");
         Path csvFile  = dataDir.resolve("products.csv");
         InventoryService service = new InventoryService();
+        InventoryService.clearScreen();
 
         // TODO: 1) Inisialisasi folder data
         service.initDataDirectory(dataDir);
